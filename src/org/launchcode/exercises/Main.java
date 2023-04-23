@@ -18,10 +18,16 @@ public class Main {
         // Test out your CheckFileExtension() function!
     }
 
-    public static void Divide(int x, int y)
-    {
-        // Write code here!
+
+    public static void Divide(int x, int y) {
+        try {
+            int result = x/y;
+            System.out.println(result);
+        } catch(ArithmeticException ex) {
+            throw new ArithmeticException("Integer can't be divided by 0");
+        }
     }
+
 
     public static int CheckFileExtension(String fileName)
     {
